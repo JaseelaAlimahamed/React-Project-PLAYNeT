@@ -7,7 +7,7 @@ import axios from "../../api/axios";
 import setUpRecaptcha from "../../context/UserAuth";
 
 import PreviewImage from "./PreviewImage";
-import { setVendorDetails } from "../../redux/vendorSlice";
+import { setVendorDetails } from "../../redux/slices/vendorSlice";
 import { useDispatch } from "react-redux";
 
 const NUMBER_REGEX = /^[0-9]{10}$/;

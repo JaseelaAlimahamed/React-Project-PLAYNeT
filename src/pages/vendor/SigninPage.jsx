@@ -5,9 +5,7 @@ import Signin from '../../components/vendor/Signin'
 function SigninPage() {
   return (
     <div>
-        <NavbarWithErrorBoundary/>
         <Signin/>
-      
     </div>
   )
 }

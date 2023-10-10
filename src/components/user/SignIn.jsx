@@ -7,7 +7,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import axios from '../../api/axios'
 import { useDispatch, useSelector } from "react-redux";
 import { googleSignin } from "../../context/UserAuth";
-import { userLogin } from "../../redux/userSlice";
+import { userLogin } from "../../redux/slices/userSlice";
 import {signin} from '../../redux/userSignIn' 
 
 
@@ -68,7 +68,8 @@ function SignIn() {
         e.preventDefault();
         try {
             const googleToken = await googleSignin();
-            let { data } = await axios.post('/signin/google', googleToken._tokenResponse)
+            console.log(googleToken);
+            let { data } = await axios.post('/signin/google', googleToken.user)
             localStorage.setItem('user', data.accessToken);
             dispatch(userLogin())
             navigate("/");

@@ -3,7 +3,7 @@ import icon from '../../public/1683957693688-thumbnail-removebg-preview.png'
 import { IoMenu, IoClose } from 'react-icons/io5';
 // 
 import { useSelector, useDispatch } from "react-redux";
-import { removeVendorDetails } from "../../redux/vendorSlice";
+import { removeVendorDetails } from "../../redux/slices/vendorSlice";
 import { Link, useNavigate } from "react-router-dom";
 
 import Modal from 'react-modal';

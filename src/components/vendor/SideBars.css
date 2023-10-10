@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+
+.sidebars {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+  height: 100vh;
+  margin-top: 64px;
+  margin-left: 0;
+  margin-right: 0 !important;
+}
+
+.sidebars ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebars ul li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.sidebars ul li a {
+  color: green;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.sidebars ul li a.active {
+  color: darkgreen;
+  font-weight:bolder;
+}
+
+
+.sidebars-toggle {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #0000;
+  width: 100%;
+  height: 30px;
+  border-radius: 50%;
+}

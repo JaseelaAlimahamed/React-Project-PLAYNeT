@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import './SideBars.css';
 import { Link, useLocation } from 'react-router-dom';
-import './SideBar.css';
 
 function SideBar() {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState('');
-
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
-  const handleToggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  
 
   
   useEffect(() => {
@@ -24,15 +19,13 @@ function SideBar() {
   }, [location]);
 
   return (
-    <div className={`sidebar ${isSidebarOpen ? 'open' : 'hide'}`}>
-      <div className="sidebar-toggle" onClick={handleToggleSidebar}>
-        <i className={`fa ${isSidebarOpen ? 'fa-bars' : 'fa-times'}`}></i>
-      </div>
+    
+    <div className='sidebars'>
       <ul>
         <li>
           <Link
             to="/vendor/"
-            className={activeLink === '/vendor/' ? 'active' : ''}
+            className={activeLink === '/vendor/'? 'active' : ''}
           >
             Dashboard
           </Link>
@@ -79,6 +72,7 @@ function SideBar() {
         </li>
       </ul>
     </div>
+    
   );
 }
 

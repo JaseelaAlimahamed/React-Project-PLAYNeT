@@ -7,9 +7,8 @@ import SideBar from '../../components/vendor/SideBar'
 function Dashboard() {
   return (
     <div>
-     <NavbarVendor/>
-     <SideBar/>
-    <DashboardVendor></DashboardVendor>
+    
+    <DashboardVendor/>
     </div>
   )
 }

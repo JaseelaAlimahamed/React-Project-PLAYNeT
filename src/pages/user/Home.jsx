@@ -9,12 +9,12 @@ import Footer from '../../components/user/Footer'
 function Home() {
     return (
         <div>
-            <Navbar />
+            
             <HomeSearchContainer />
             <HomeVenueContainer/>
             <HomeGameContainer/>
             <HomeFeatureContainer/>
-            <Footer/>
+            
         </div>
     )
 }

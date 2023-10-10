@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import axios from "../../api/axios";
 import { Navigate } from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
-import { setVendorDetails } from '../../redux/vendorSlice'
+import { setVendorDetails } from '../../redux/slices/vendorSlice'
 import { Link } from "react-router-dom";
 const VENDORSIGNIN_URL = '/vendor/signin'
 
@@ -72,7 +72,7 @@ function Signin() {
             <div className="w-full h-45 bg-green-800 shadow-md opacity-100 rounded-md p-8 space-y-6 ">
                 <div className="space-y-1">
                   <h1 className="text-3xl font-roboto font-bold">
-                    Welcome Back Veneu Manager .
+                    Welcome Back Turf Manager .
                   </h1>
                 </div>
             <div className="p-5">

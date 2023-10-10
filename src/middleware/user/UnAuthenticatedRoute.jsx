@@ -1,6 +1,6 @@
 import { Navigate} from "react-router-dom";
 // import { useSelector } from "react-redux";
-import { checkIfUserLoggedIn } from "../../redux/userSlice";
+import { checkIfUserLoggedIn } from "../../redux/slices/userSlice";
 
 
 const UnAuthenticatedRoute = ({children}) => {

@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import { checkIfUserLoggedIn } from '../../redux/userSlice';
+import { checkIfUserLoggedIn } from '../../redux/slices/userSlice';
 
 
 const AuthenticatedRoute = ({ children }) => {

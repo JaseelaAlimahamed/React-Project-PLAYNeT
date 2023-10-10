@@ -3,7 +3,7 @@ import icon from '../../public/1683957693688-thumbnail-removebg-preview.png'
 import { IoMenu, IoClose } from 'react-icons/io5';
 // 
 import { useSelector, useDispatch } from "react-redux";
-import { userLogout } from "../../redux/userSlice";
+import { userLogout } from "../../redux/slices/userSlice";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorBoundary from "./ErrorBoundary"
 import Modal from 'react-modal';
@@ -73,9 +73,12 @@ function Navbar() {
           <ul className='m-4'>
           <Link to="/"><li className="border-b border-black-100 py-2">HOME</li></Link>
             {user.user.isLoggedIn ? (
+              <div>
               <button className="border-b border-black-100 py-2" onClick={openLogoutModal}>
                 LOG OUT
               </button>
+              <li className="border-b border-black-100 py-2">PROFILE</li>
+              </div>
             ) : (
               <Link to="/signin">
                 <li className="border-b border-black-100 py-2">SIGN IN</li>

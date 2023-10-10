@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 import Google from './images/Google.png'
 import axios from '../../api/axios'
 import setUpRecaptcha from '../../context/UserAuth'
-import { setUserDetails, userLogin } from "../../redux/userSlice";
+import { setUserDetails, userLogin } from "../../redux/slices/userSlice";
 import { Info, Check, Cross } from './images/Icons'
 
 const USER_REGEX = /^[a-zA-z][a-zA-Z0-9-_ ]{3,23}$/;

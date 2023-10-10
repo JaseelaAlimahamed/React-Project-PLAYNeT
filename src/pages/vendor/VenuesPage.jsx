@@ -1,14 +1,15 @@
 import React from 'react'
 import SideBar from '../../components/vendor/SideBar'
 import NavbarVendor from '../../components/vendor/NavbarVendor'
+import VendorAllVenue from '../../components/vendor/VendorAllVenue'
 
 
 
 function VenuesPage() {
   return (
     <div>
-        <NavbarVendor/>
-        <SideBar/>
+       
+        <VendorAllVenue/>
       
     </div>
   )
