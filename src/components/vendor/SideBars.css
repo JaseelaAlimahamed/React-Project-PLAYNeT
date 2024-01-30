@@ -5,9 +5,12 @@ body {
 .sidebars {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: white;
-  padding: 10px;
-  width: 100%;
-  height: 100vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  width: 40vh;
+  height:96%;
   margin-top: 64px;
   margin-left: 0;
   margin-right: 0 !important;
@@ -31,13 +34,13 @@ body {
   text-decoration: none;
 }
 
-.sidebars ul li a.active {
+.sidebars ul li a.active{
   color: darkgreen;
   font-weight:bolder;
 }
 
 
-.sidebars-toggle {
+/* .sidebars-toggle {
   width: 100%;
   cursor: pointer;
   display: flex;
@@ -48,4 +51,4 @@ body {
   width: 100%;
   height: 30px;
   border-radius: 50%;
-}
+} */

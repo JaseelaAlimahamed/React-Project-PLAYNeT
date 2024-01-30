@@ -7,7 +7,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import axios from '../../api/axios'
 import { useDispatch, useSelector } from "react-redux";
 import { googleSignin } from "../../context/UserAuth";
-import { userLogin } from "../../redux/slices/userSlice";
+import { setUserDetails, userLogin } from "../../redux/slices/userSlice";
 import {signin} from '../../redux/userSignIn' 
 
 
@@ -18,7 +18,7 @@ function SignIn() {
 
     const dispatch = useDispatch();
 
-    const user = useSelector((state) => state);
+    const user = useSelector((state) => state.user);
 
     const navigate = useNavigate();
  
@@ -49,8 +49,11 @@ function SignIn() {
           return;
         }
         try {
+           dispatch(setUserDetails({ name: user, mobile, wallet: 0 }))
            const response = await dispatch(signin({ mobile, password:pwd }));
+
            setErrMsg(response?.payload?.message);
+           navigate("/");
             
         } catch (error) {
             setErrMsg(error);
@@ -68,9 +71,10 @@ function SignIn() {
         e.preventDefault();
         try {
             const googleToken = await googleSignin();
-            console.log(googleToken);
+            const userName=googleToken.user.displayName
             let { data } = await axios.post('/signin/google', googleToken.user)
             localStorage.setItem('user', data.accessToken);
+            dispatch(setUserDetails({ name: userName, wallet: 0 }))
             dispatch(userLogin())
             navigate("/");
         } catch (error) {

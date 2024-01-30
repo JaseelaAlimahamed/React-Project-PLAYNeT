@@ -1,38 +1,43 @@
-.sidebar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    background-color: white;
-    padding: 10px;
-    width: 25%;
-    height: 100%;
-    margin-top: 64px; /* Adjust the value as per your navbar height */
+.body{
+  margin:0%
+}
+.sidebarAdmin {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 10px;
+
+  width: 50vh;
+  height: 100%;
+  margin-top: 64px;
+  margin-left: 0;
+  margin-right: 0 !important; /* Adjust the value as per your navbar height */
   }
   
-  .sidebar ul {
+  .sidebarAdmin ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
   
-  .sidebar ul li {
+  .sidebarAdmin ul li {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     margin-bottom: 10px;
     background-color: white;
   }
   
-  .sidebar ul li a {
+  .sidebarAdmin ul li a {
     color: green;
     font-weight: normal;
     text-decoration: none;
   }
   
-  .sidebar ul li a.active {
+  .sidebarAdmin ul li a.active {
     color: darkgreen;
     font-weight: bold;
   }
   
-  .sidebar-toggle {
+  .sidebarAdmin-toggle {
     cursor: pointer;
     display: flex;
     align-items: center;

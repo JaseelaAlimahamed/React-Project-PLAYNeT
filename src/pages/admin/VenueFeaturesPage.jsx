@@ -4,12 +4,8 @@ import SportsFeature from '../../components/admin/SportsFeatures'
 
 function VenueFeaturesPage() {
   return (
-    <div>
-      
-      <div className='flex justify-between'>
-      <SidebarAdmin/>
+    <div className='w-full'>
       <SportsFeature />
-      </div>
     </div>
   )
 }

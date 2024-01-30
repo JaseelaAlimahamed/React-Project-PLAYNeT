@@ -7,7 +7,7 @@ export const getTurfs = async () => {
     try {
         console.log("reached getturfs")
         console.log(token);
-        const { data } = await axios.get(GET_TURFS, {
+        const {data } = await axios.get(GET_TURFS, {
             headers: {
                 Authorization: token
             }
@@ -96,3 +96,44 @@ export const addVenue = async (details) => {
     }
 
 }
+export const bookingDetails = async () => {
+
+   const Token = localStorage.getItem('vendor');
+    
+    try {
+      
+      const response  = await axios.get('/vendor/bookings',{
+        headers: {
+            "Content-Type": "application/json",
+          Authorization:Token,
+        },
+      });
+      console.log(response);
+        return response.data; // Return the response from the API call if needed
+    } catch (err) {
+        console.log(err);
+        console.log(err.message);
+        throw err; // Throw the error to be caught by the caller
+    }
+
+}
+export const bookingDetailsCancelled = async () => {
+
+    const Token = localStorage.getItem('vendor');
+     
+     try {
+       
+       const response  = await axios.get('/vendor/bookings/cancelled',{
+         headers: {
+             "Content-Type": "application/json",
+           Authorization:Token,
+         },
+       });
+        return response.data; // Return the response from the API call if needed
+     } catch (err) {
+         console.log(err);
+         console.log(err.message);
+         throw err; // Throw the error to be caught by the caller
+     }
+ 
+ }

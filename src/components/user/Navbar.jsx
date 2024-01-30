@@ -77,7 +77,9 @@ function Navbar() {
               <button className="border-b border-black-100 py-2" onClick={openLogoutModal}>
                 LOG OUT
               </button>
+              <Link to='/profile'>
               <li className="border-b border-black-100 py-2">PROFILE</li>
+              </Link>
               </div>
             ) : (
               <Link to="/signin">

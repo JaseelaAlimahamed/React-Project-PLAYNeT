@@ -9,6 +9,8 @@ import AuthenticatedRoute from '../middleware/vendor/AuthenticatedRoute'
 import VendorLayout from '../layouts/VendorLayout'
 import VenueAddPage from '../pages/vendor/VenueAddPage'
 import VendorEditPage from '../pages/vendor/VendorEditPage'
+import BookingSuccessPage from '../pages/vendor/BookingSuccessPage';
+import BookingCancelledPage from '../pages/vendor/BookingCancelledPage';
 
 function VendorRoutes() {
   return (
@@ -20,7 +22,9 @@ function VendorRoutes() {
         <Route path="venues" element={<AuthenticatedRoute><VenuesPage /></AuthenticatedRoute>} />
         <Route path="addVenue" element={<AuthenticatedRoute><VenueAddPage/></AuthenticatedRoute>} />
         <Route path="venues/edit/:id" element={<AuthenticatedRoute><VendorEditPage/></AuthenticatedRoute>} />
-
+        <Route path='bookingSuccess' element={<AuthenticatedRoute><BookingSuccessPage /></AuthenticatedRoute>} />
+        <Route path='bookingCancelled' element={<AuthenticatedRoute><BookingCancelledPage /></AuthenticatedRoute>} />
+     
       </Route>
     </Routes >
   )

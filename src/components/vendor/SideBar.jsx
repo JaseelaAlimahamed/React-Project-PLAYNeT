@@ -10,7 +10,7 @@ function SideBar() {
   
   useEffect(() => {
     const currentPath = location.pathname;
-    const links = document.querySelectorAll('.sidebar ul li a');
+    const links = document.querySelectorAll('.sidebars ul li a');
     links.forEach((link) => {
       if (link.getAttribute('href') === currentPath) {
         setActiveLink(link.getAttribute('href'));
@@ -40,26 +40,19 @@ function SideBar() {
         </li>
         <li>
           <Link
-            to="/vendor/completed-bookings"
-            className={activeLink === '/vendor/completed-bookings' ? 'active' : ''}
+            to="/vendor/bookingSuccess"
+            className={activeLink === '/vendor/bookingSuccess' ? 'active' : ''}
           >
             Completed Bookings
           </Link>
         </li>
+
         <li>
           <Link
-            to="/vendor/pending-bookings"
-            className={activeLink === '/vendor/pending-bookings' ? 'active' : ''}
+            to="/vendor/bookingCancelled"
+            className={activeLink === '/vendor/bookingCancelled' ? 'active' : ''}
           >
-            Pending Bookings
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/vendor/blocked-bookings"
-            className={activeLink === '/vendor/blocked-bookings' ? 'active' : ''}
-          >
-            Blocked Bookings
+            Cancelled Bookings
           </Link>
         </li>
         <li>

@@ -8,8 +8,8 @@ const AuthenticatedRoute = ({ children }) => {
 
   let location = useLocation();
 
-  const vendor = useSelector(slice => slice.vendor)
-
+  const vendor = useSelector(state => state.vendor)
+console.log(vendor,"nnnnn");
   if (!checkIfVendorLoggedIn()) {
     return <Navigate to='/vendor/signin' replace />;
   } else if (vendor.status === 'rejected' && location.pathname === '/vendor/profile'){

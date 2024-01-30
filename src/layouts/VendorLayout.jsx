@@ -8,7 +8,7 @@ function VendorLayout() {
     return (
         <div>
             <NavbarVendor />
-            <div className="flex relatve">
+            <div className="flex">
                 <div  >
                     { location.pathname!=='/vendor/signin' && location.pathname !== '/vendor/signup' && location.pathname !== '/vendor/pending' && <SideBar/> }
                 </div>

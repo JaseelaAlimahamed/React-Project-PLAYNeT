@@ -5,7 +5,7 @@ import SidebarAdmin from '../../components/admin/SidebarAdmin'
 function AdminDashboard() {
   return (
     <div>
-      <SidebarAdmin/>
+
     </div>
   )
 }

@@ -46,6 +46,7 @@ const userSlice = createSlice({
     initialState: initialState(),
     reducers: {
       setUserDetails:(state, action) => {
+        
         state.name = action.payload.name;
         state.mobile = action.payload.mobile;
         state.wallet = action.payload.wallet

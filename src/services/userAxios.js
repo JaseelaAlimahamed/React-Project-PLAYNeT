@@ -13,6 +13,19 @@ export const getNewVenues = async () => {
       throw error; // Re-throw the error to handle it in the calling code
     }
   };
+  export const getDistrictVenues = async (district) => {
+    try {
+      console.log(district)
+      const GET_VENUES = `/districtVenues/${district}`;
+      const response = await axios.get(GET_VENUES);
+
+      return response.data;
+    } catch (error) {
+      console.error(error);
+      throw error; // Re-throw the error to handle it in the calling code
+    }
+  };
+
   export const getVenue = async (venueId) => {
     try {
       const GET_VENUE = `/venue/${venueId}`;
@@ -70,6 +83,58 @@ export const verifyPayment = async (detail)=>{
             },
           });
         
+        return response.data;
+      } catch (error) {
+        console.error(error);
+        throw error; // Re-throw the error to handle it in the calling code
+      }
+  }
+  export const getBookings = async ()=>{
+    const token = localStorage.getItem("user");
+    console.log(token);
+      try {
+          
+        const GET_BOOKINGS= '/bookings';
+        const response = await axios.get(GET_BOOKINGS, {
+            headers: {
+              Authorization: token,
+            },
+          });
+        
+        return response.data;
+      } catch (error) {
+        console.error(error);
+        throw error; // Re-throw the error to handle it in the calling code
+      }
+  }
+  export const cancelBooking = async (bookingId)=>{
+    const token = localStorage.getItem("user");
+    console.log(token);
+      try {
+          
+        const CANCEL_BOOKING= `/booking/${bookingId}/refund`;
+        const response = await axios.get(CANCEL_BOOKING, {
+            headers: {
+              Authorization: token,
+            },
+          });
+        
+        return response.data;
+      } catch (error) {
+        console.error(error);
+        throw error; // Re-throw the error to handle it in the calling code
+      }
+  }
+  export const nameChange = async (name)=>{
+    const token = localStorage.getItem("user");
+    console.log(token);
+      try {
+          
+        const response = await axios.put('/changeName', { name }, {
+          headers: {
+            Authorization: token
+          }
+        });
         return response.data;
       } catch (error) {
         console.error(error);

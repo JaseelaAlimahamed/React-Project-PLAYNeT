@@ -1,6 +1,7 @@
 import React from 'react';
 import backgroundImage from './images/footballpic.jpg';
-import { useState, useEffect,useNavigate} from 'react';
+import { useState, useEffect,} from 'react';
+import {useNavigate} from 'react-router-dom'
 
 function Typewriter({ text }) {
     const [displayText, setDisplayText] = useState('');
@@ -30,6 +31,12 @@ function HomeSearchContainer() {
 
     const handleDistrictChange = (event) => {
         setSelectedDistrict(event.target.value);
+    };
+    const handleGoClick = () => {
+        if (selectedDistrict) {
+            const url = `/venue/district/${selectedDistrict}`;
+            navigate(url);
+        }
     };
     
     
@@ -62,7 +69,7 @@ function HomeSearchContainer() {
                     </select>
                     <button
                         className="ml-2 bg-green-900 text-white py-2 px-4 rounded-md"
-                        onClick=
+                        onClick={handleGoClick}
                     >Go
                     </button>
 

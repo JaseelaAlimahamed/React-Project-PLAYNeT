@@ -100,7 +100,7 @@ function SportsFeature() {
   };
   
   return (
-    <div className="mt-16 w-full p-4 h-2/4 sm:ml-0 z-0 opacity-95 bg-emerald-900 relative">
+    <div className="mt-16 w-100 p-4 h-full sm:ml-0 z-0 opacity-95 bg-emerald-900 relative">
     <Toaster position="top-center "/>
     <div className="p-1 border-gray-200 z-0 rounded-lg dark:border-emerald-700 mt-6 sticky top-0">
       <div className="flex items-center justify-between mb-4">

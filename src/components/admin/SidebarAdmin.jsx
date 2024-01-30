@@ -15,7 +15,7 @@ function SidebarAdmin() {
   
   useEffect(() => {
     const currentPath = location.pathname;
-    const links = document.querySelectorAll('.sidebar ul li a');
+    const links = document.querySelectorAll('.sidebarAdmin ul li a');
     links.forEach((link) => {
       if (link.getAttribute('href') === currentPath) {
         setActiveLink(link.getAttribute('href'));
@@ -24,8 +24,8 @@ function SidebarAdmin() {
   }, [location]);
 
   return (
-    <div className={`sidebar ${isSidebarOpen ? 'open' : 'hide'}`}>
-      <div className="sidebar-toggle" onClick={handleToggleSidebar}>
+    <div className={`sidebarAdmin ${isSidebarOpen ? 'open' : 'hide'}`}>
+      <div className="sidebarAdmin-toggle" onClick={handleToggleSidebar}>
         <i className={`fa ${isSidebarOpen ? 'fa-bars' : 'fa-times'}`}></i>
       </div>
       <ul>
@@ -58,7 +58,7 @@ function SidebarAdmin() {
             to="/admin/bookings"
             className={activeLink === '/admin/bookings' ? 'active' : ''}
           >
-            Bookigs
+            Bookings
           </Link>
         </li>
         <li>
